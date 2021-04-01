@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CryptoMinance" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="l9F-f9-8vh">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CryptoCell" rowHeight="190" id="e24-xN-d3F" customClass="CryptoTableViewCell" customModule="CryptoMinance" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="190"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="e24-xN-d3F" id="gXe-Qh-DlO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="190"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eii-5n-MFh">
+                                                    <rect key="frame" x="14" y="28" width="358" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="358" id="lJW-qm-Yj4"/>
+                                                        <constraint firstAttribute="height" constant="49" id="q3X-ge-J9c"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eck-PX-X8l">
+                                                    <rect key="frame" x="14" y="111" width="358" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Eii-5n-MFh" firstAttribute="top" secondItem="gXe-Qh-DlO" secondAttribute="topMargin" constant="17" id="5uy-tD-pLE"/>
+                                                <constraint firstItem="Eii-5n-MFh" firstAttribute="trailing" secondItem="eck-PX-X8l" secondAttribute="trailing" id="KFT-lB-jf5"/>
+                                                <constraint firstItem="eck-PX-X8l" firstAttribute="top" secondItem="Eii-5n-MFh" secondAttribute="bottom" constant="34" id="KYY-F9-fuM"/>
+                                                <constraint firstItem="Eii-5n-MFh" firstAttribute="leading" secondItem="eck-PX-X8l" secondAttribute="leading" id="RWd-KR-S2h"/>
+                                                <constraint firstItem="Eii-5n-MFh" firstAttribute="leading" secondItem="gXe-Qh-DlO" secondAttribute="leadingMargin" constant="-6" id="Z27-wV-pqP"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="eck-PX-X8l" secondAttribute="bottom" constant="19" id="uZb-Qs-xTd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="currencyText" destination="Eii-5n-MFh" id="vnm-UK-YGv"/>
+                                            <outlet property="priceText" destination="eck-PX-X8l" id="Q6u-7k-pHU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l9F-f9-8vh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3VO-fD-7jh"/>
+                            <constraint firstItem="l9F-f9-8vh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J8H-Zr-Dty"/>
+                            <constraint firstItem="l9F-f9-8vh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="NwU-Io-SOw"/>
+                            <constraint firstItem="l9F-f9-8vh" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Qib-90-Ujm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="l9F-f9-8vh" id="CNY-Zk-Oun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="103.79464285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
